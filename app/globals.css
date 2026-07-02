@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Google Stitch Material You Tokens - Light Theme */
+  --md-sys-color-primary: #1a73e8;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-surface: #f8f9fa;
+  --md-sys-color-on-surface: #202124;
+  --md-sys-color-surface-variant: #e8eaed;
+  --md-sys-color-secondary: #5f6368;
+  --md-sys-color-tertiary: #1e8e3e;
+  --md-sys-color-error: #d93025;
+}
+
+.dark {
+  /* Google Stitch Material You Tokens - Dark Theme */
+  --md-sys-color-primary: #8ab4f8;
+  --md-sys-color-on-primary: #202124;
+  --md-sys-color-surface: #202124;
+  --md-sys-color-on-surface: #e8eaed;
+  --md-sys-color-surface-variant: #3c4043;
+  --md-sys-color-secondary: #9aa0a6;
+  --md-sys-color-tertiary: #81c995;
+  --md-sys-color-error: #f28b82;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--md-sys-color-primary);
+  --color-on-primary: var(--md-sys-color-on-primary);
+  --color-surface: var(--md-sys-color-surface);
+  --color-on-surface: var(--md-sys-color-on-surface);
+  --color-surface-variant: var(--md-sys-color-surface-variant);
+  --color-secondary: var(--md-sys-color-secondary);
+  --color-tertiary: var(--md-sys-color-tertiary);
+  --color-error: var(--md-sys-color-error);
+  
+  --font-sans: var(--font-inter);
+  
+  --radius-md-xs: 4px;
+  --radius-md-sm: 8px;
+  --radius-md-md: 12px;
+  --radius-md-lg: 16px;
+  --radius-md-xl: 28px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
