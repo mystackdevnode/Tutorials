@@ -29,4 +29,3 @@ Your decisions must be architecturally sound, performant, and production-ready.
 - Always run `tsc --noEmit` mentally before claiming TypeScript is valid
 - Prefer composition over inheritance
 - Prefer React Server Components over Client Components (ratio target: 80/20)
-Diff
