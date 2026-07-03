@@ -1,0 +1,15 @@
+{
+  "servers": {
+    "content-filesystem": {
+      "type": "filesystem",
+      "allowed_paths": ["c:/Tutorials/content/tutorials"],
+      "permissions": ["read"],
+      "description": "Tutorial MDX content source — read-only"
+    }
+  },
+  "policies": {
+    "max_file_size_kb": 500,
+    "allowed_extensions": [".mdx", ".md"],
+    "block_patterns": ["*.env*", "*.key", "*.secret"]
+  }
+}

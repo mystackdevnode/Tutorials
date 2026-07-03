@@ -1,0 +1,32 @@
+---
+title: "Getting Started with Next.js 15"
+description: "Learn the basics of the App Router and Server Components."
+difficulty: "beginner"
+tags: ["nextjs", "react", "app-router"]
+publishedAt: "2026-07-03"
+estimatedMinutes: 10
+---
+
+# Welcome to Next.js 15
+
+Next.js is a React framework for building full-stack web applications. 
+
+## Server Components
+
+By default, Next.js uses React Server Components. This allows you to render UI on the server and stream it to the client, reducing bundle size and improving performance.
+
+```tsx
+// This is a Server Component
+export default async function Page() {
+  const data = await fetchData()
+  return <div>{data.title}</div>
+}
+```
+
+## The App Router
+
+The App Router is a new paradigm for building applications in Next.js, using features like nested layouts, streaming, and error handling natively.
+
+- Nested Layouts
+- Error Boundaries
+- Loading UI
