@@ -1,10 +1,16 @@
 {
-  "servers": {
+  "mcpServers": {
     "content-filesystem": {
       "type": "filesystem",
       "allowed_paths": ["c:/Tutorials/content/tutorials"],
       "permissions": ["read"],
       "description": "Tutorial MDX content source — read-only"
+    },
+    "stitch": {
+      "serverUrl": "https://stitch.googleapis.com/mcp",
+      "headers": {
+        "X-Goog-Api-Key": "${STITCH_API_KEY}"
+      }
     }
   },
   "policies": {

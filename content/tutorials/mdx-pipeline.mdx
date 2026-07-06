@@ -1,0 +1,25 @@
+---
+title: "Building an MDX Pipeline"
+description: "How to parse and render Markdown with React components."
+difficulty: "intermediate"
+tags: ["mdx", "content", "nextjs"]
+publishedAt: "2026-07-05"
+estimatedMinutes: 20
+---
+
+# The Power of MDX
+
+MDX is Markdown for the component era. It lets you write JSX directly in your markdown files.
+
+## Setting up next-mdx-remote
+
+Using `next-mdx-remote/rsc` makes it incredibly simple to render MDX on the server.
+
+```tsx
+import { compileMDX } from 'next-mdx-remote/rsc'
+
+const source = '# Hello World \n\n This is **MDX**!'
+const { content } = await compileMDX({ source })
+```
+
+You can even pass custom React components into the MDX string, replacing standard HTML tags (like `<img>` or `<a>`) with your own Next.js components (`<Image>` or `<Link>`).

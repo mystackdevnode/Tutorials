@@ -1,0 +1,25 @@
+---
+title: "React Server Components"
+description: "Master the RSC architecture in Next.js 15."
+difficulty: "advanced"
+tags: ["react", "rsc", "nextjs"]
+publishedAt: "2026-07-04"
+estimatedMinutes: 15
+---
+
+# Why React Server Components?
+
+React Server Components (RSC) represent a paradigm shift in how we build React applications. 
+Instead of sending your entire component tree to the browser, RSC allows you to keep large dependencies and data-fetching logic entirely on the server.
+
+## Data Fetching Example
+
+```tsx
+// This runs exclusively on the server
+export default async function DataCard() {
+  const data = await fetch('https://api.example.com/data').then(r => r.json())
+  return <div>{data.name}</div>
+}
+```
+
+By default in the Next.js App Router, all components are Server Components unless explicitly marked with `'use client'`.
